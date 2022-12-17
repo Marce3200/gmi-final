@@ -1,0 +1,56 @@
+.seccion-quienes{
+    background-color: #0A0F3C;
+    padding-bottom:50px;
+}
+
+.texto-descripcion{
+    letter-spacing: 0.4px;
+    font-size: 13px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    color: white;
+    line-height: 22px;
+}
+.titulo-seccion-quienes{
+    text-transform: uppercase;
+    font-size: x-large;
+    font-weight: 100;
+    letter-spacing: 1.9px;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    
+    color: white;
+}
+.text-valores {
+    font-size: 13px;
+    letter-spacing: 0.4px;
+    font-family: "Manrope", sans-serif;
+    font-weight: 100;
+    padding: 10x;
+  }
+  
+  .card-mision{
+    width: 80%;
+  margin-top: 5px;
+  background-color: rgb(238, 236, 236);
+  color: rgb(2, 2, 2);
+  border-color: white;
+  padding: 20px;
+  }
+  .titulo-valores{
+      margin-top: 15px;
+      font-size: 16px;
+  }
+
+  .valores{
+    padding: 30px;
+    padding-bottom: 80px;
+  }
+  
+i{
+  color: #0C85F2;
+}
+
+.img-fluid{
+  width: 100%;
+}

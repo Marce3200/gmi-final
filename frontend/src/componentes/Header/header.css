@@ -1,0 +1,28 @@
+.logosection {
+  background: url(../img/background.jpg) no-repeat center fixed;
+  height: 80vh;
+  background-size: cover;
+  max-width: 100%;
+  margin: 0;
+}
+
+.bajada-header {
+  color: white;
+  font-size: x-large;
+  font-weight: 100;
+  margin-top: 30px;
+  padding: 10px;
+}
+
+.logo {
+  
+  width: 430px;
+}
+
+.form-mail {
+  margin-top: 30px;
+  color: white;
+  width: 50%;
+  font-weight: 100;
+  font-size: small;
+}
