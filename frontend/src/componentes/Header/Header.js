@@ -23,7 +23,7 @@ const Header = () => {
           <div className="container-boton">
           
           <a href = "/contacto"><Button
-            className="button-enviar"
+            className="button-contacto"
             size="sm">
             Contáctanos
           </Button>
