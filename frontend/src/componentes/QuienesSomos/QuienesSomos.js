@@ -10,11 +10,7 @@ const QuienesSomos = () => {
   return (
     <Container fluid className="seccion-quienes p-0">
       <center>
-        <Row className="row-quienes">
-          <Col>
-          <img  className="img-fluid" src={propiedad}></img>
-       </Col>
-       </Row>
+        
         <Row className="w-75">
           <Col id='quienesSomos'>
     

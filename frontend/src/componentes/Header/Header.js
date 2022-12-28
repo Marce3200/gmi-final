@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../img/logo.png";
+import logo from "../img/logoheader.png"
 import "../Header/header.css";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -11,15 +11,15 @@ import Button from "react-bootstrap/Button";
 const Header = () => {
   return (
     <Container fluid className="  p-0">
-      <Row className="logosection align-items-center">
-        
+      <Row className="logosection ">
+      <center>
         <Col className="text-center">
           <img className="logo" src={logo} />
           <p className="bajada-header">
             {" "}
             Gestionamos tu propiedad en Providencia
           </p>
-          <center>
+         
           <div className="container-boton">
           
           <a href = "/contacto"><Button
@@ -29,8 +29,9 @@ const Header = () => {
           </Button>
           </a>
         </div>
-          </center>
+          
         </Col>
+        </center>
       </Row>
     </Container>
   );
