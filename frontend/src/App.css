@@ -11,3 +11,10 @@ letter-spacing: 1.9px;
 padding-top: 30px;
 margin-bottom: 30px;
 }
+
+html, body {
+  overflow-x: hidden;
+}
+body {
+  position: relative
+}
