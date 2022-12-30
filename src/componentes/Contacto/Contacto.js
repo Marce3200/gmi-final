@@ -72,7 +72,8 @@ export default function Contacto() {
       <Row>
         <center> <Col>
         <p className="titulo-contacto">Contáctanos</p>
-        <Form className="form-contacto">
+        <Form className="form-contacto" name="contact" method="POST">
+          <input type="hidden" name="contactForm" value="contact" /> 
           <Form.Group className="mb-3" controlId="name">
             <Form.Label className="form-label">Nombre</Form.Label>
             <Form.Control
@@ -110,18 +111,21 @@ export default function Contacto() {
               rows={3}
             />
           </Form.Group>
-        </Form>
-        <div className="container-boton">
+          <div data-netlify-recaptcha="true"></div>
+          <div className="container-boton">
           <Button
             className="button-enviar"
             size="sm"
+            type="submit"
             
-            onClick={handleSubmit}
+            // onClick={handleSubmit}
           >
             Enviar
           </Button>
           
         </div>
+        </Form>
+      
         {correoEnviado ? <p>Su correo fue enviado exitosamente</p>:null}
         </Col> </center>
         </Row>
