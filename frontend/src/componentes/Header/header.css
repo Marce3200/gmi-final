@@ -1,14 +1,14 @@
 .logosection {
-  background: url(../img/propiedad.jpg) no-repeat center fixed;
+  background: url(../img/background.jpg) no-repeat center fixed;
   height: 80vh;
   background-size: cover;
   max-width: 100%;
   margin: 0;
-  padding-top: 80px;
+  padding-top: 180px;
 }
 
 .bajada-header {
-  color: #01063a;
+  color: #ffffff;
   font-size: 3vh;
   font-weight: 100;
   margin-top: 10px;
@@ -16,18 +16,15 @@
 }
 
 .logo {
-  
-<<<<<<< HEAD
   max-width: 90%;
-=======
-  width: 40%;
->>>>>>> b70070fee6220332a9d0cc593c2cfcdd569ce2c9
+  
 }
 
 
 
 .button-contacto{
-  color: white;
-  background-color:#0086f6;
+  color: #0086f6;
+  background-color:white;
+  border-color: white;
   
 }
