@@ -7,11 +7,17 @@ import axios from "axios";
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
 import Col from "react-bootstrap/esm/Col";
+import emailjs from '@emailjs/browser';
+import ReCAPTCHA from "react-google-recaptcha";
+import { useRef } from 'react';
 
 
 export default function Contacto() {
   const [correoEnviado, setCorreoEnviado] = useState (false);
 
+  const form = useRef();
+
+  const captchaRef = useRef(null)
 
 
   const [formValues, setFormValues] = useState({
@@ -21,27 +27,25 @@ export default function Contacto() {
      
      
    });
+
    async function handleSubmit(e) {
      e.preventDefault();
      const {mail,mensaje, nombre} = formValues;
-     setCorreoEnviado(true);
-     setFormValues({
-      mail: "",
-      mensaje: "",
-      nombre: "",
-      
-    }
-      
-     )
-     await axios.post('http://localhost:3001/api/form',{
-      mail,
-      mensaje,
-      nombre,
+   
+    //  setFormValues({
+    //   mail: "",
+    //   mensaje: "",
+    //   nombre: "",
+    // }
+     //)
+     emailjs.sendForm('service_3clxo0y', 'template_n4fnd19', form.current, 'mdjqgeCoYzcnoB1Z1')//recibe ID del servicio de mail.
+     .then((result) => {
+        setCorreoEnviado(true);
+     }, (error) => {
+         // show the user an error
      });
 
-     
-
-
+     captchaRef.current.reset();
 
    }
 
@@ -72,7 +76,7 @@ export default function Contacto() {
       <Row>
         <center> <Col>
         <p className="titulo-contacto">Contáctanos</p>
-        <Form className="form-contacto" name="contact" method="POST">
+        <Form className="form-contacto" name="contact" onSubmit={handleSubmit} ref= {form}>
           <input type="hidden" name="contactForm" value="contact" /> 
           <Form.Group className="mb-3" controlId="name">
             <Form.Label className="form-label">Nombre</Form.Label>
@@ -111,14 +115,19 @@ export default function Contacto() {
               rows={3}
             />
           </Form.Group>
-          <div data-netlify-recaptcha="true"></div>
+
+          <div>
+            <ReCAPTCHA
+              sitekey = "6LcxVrwjAAAAAGMP4CoFyWigxzREM63A9dXxCDMf" //sitekey original
+              ref = {captchaRef}
+            />
+          </div>
           <div className="container-boton">
+
           <Button
             className="button-enviar"
             size="sm"
             type="submit"
-            
-            // onClick={handleSubmit}
           >
             Enviar
           </Button>
